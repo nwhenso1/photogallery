@@ -1,0 +1,378 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End CSS Reset */
+
+/* Colors section
+Teal:   #007D7B
+Black:  #000000
+White:  #FFFFFF
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 485px;
+  background: #000000;
+  min-height: 100vh;
+  margin: auto;
+}
+
+header {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about, #gallery {
+  background: #FFFFFF;
+}
+
+h1 {
+  width: 485px;
+  display: block;
+  font-size: 3em;
+  background: #FFFFFF;
+  color: #007D7B;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  padding: 2vw 0;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5vw;
+}
+
+nav li {
+  display:inline-block;
+}
+
+nav a {
+  font-size: 1.5em;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2vw;
+}
+
+#topnav {
+  position: fixed;
+  bottom: .5%;
+  right: .5%;
+  padding: 5px;
+  background: rgba(0,0,0,.5);
+  z-index: 2;
+}
+
+p {
+  font-size: 1.25em;
+  padding: 2%;
+}
+
+#photogrid {
+  display:grid;
+  grid-template-rows: repeat(12, .5fr);
+  position: relative;
+  justify-content: center;
+  gap: 2vw;
+  row-gap: 2vw;
+  object-fit: fill;
+}
+
+figure {
+  position: relative;
+}
+
+figure img {
+  display: block;
+}
+
+.toptext {
+  position: absolute;
+  top: 2vw;
+  left: 0;
+  right: 0;
+}
+
+.bottomtext {
+  position: absolute;
+  bottom: 7vw;
+  left: 0;
+  right: 0;
+}
+
+.bottombigtext {
+  position: absolute;
+  bottom: 3vw;
+  left: 0;
+  right: 0;
+}
+
+.whitetext {
+  color: #FFFFFF;
+}
+
+.photo {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+
+}
+
+figcaption, label, input, small {
+  font-size: 1em;
+}
+
+figcaption {
+  text-align: center;
+}
+
+footer {
+  display: block;
+  width: 90%;
+  margin: 0 0 0 5%;
+  color:#FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10vw 0 2vw 0;
+}
+
+#contact {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+  width: 90%;
+  margin: 0 0 0 5%;
+}
+
+#contact h2 {
+  margin: 0 0 4vw 0;
+}
+
+#contact p {
+  text-align: center;
+  margin: 0 0 4vw 0;
+}
+
+#form {
+  width: 90%;
+}
+
+#form label, #form input {
+  text-transform: uppercase;
+}
+#form input {
+  height: 3vw;
+}
+
+#form .textbox {
+  display: block;
+  width: 100%;
+  margin: 0 0 10% 0;
+}
+
+#button {
+  display: block;
+  color:#FFFFFF;
+  background:#007D7B;
+  margin: auto;
+  padding: 5px 60px;
+  border: none;
+  border-radius: 12px;
+}
+
+#form .textbox:placeholder-shown {
+  -webkit-text-fill-color: #007D7B;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 880px) {
+  body {
+    width: 880px;
+  }
+
+  header {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    width: 100%;
+    text-align: left;
+    padding: 5px 0 5px 10px;
+  }
+
+  nav li {
+    margin: 0 5% 0 0;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  #photogrid {
+    display: grid;
+    width: 880px;
+    margin: 0 0 0 .5vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, .5fr);
+    padding: 0;
+  }
+
+  .photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .bottomtext {
+    bottom: 5vw;
+  }
+
+  .hawaiitext {
+    top: 240px;
+  }
+
+  .bottombigtext {
+    bottom: 2vw;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  #form {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    width: 1300px;
+  }
+
+  h1 {
+    width: 1300px;
+    text-align: left;
+    padding: 5px 0 5px 10px;
+  }
+
+  .main-nav {
+    width: 1300px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    min-height: 5vw;
+  }
+
+  nav a {
+    padding: 0;
+  }
+
+  p {
+    padding: 1vw;
+  }
+
+  #photogrid {
+    display: grid;
+    margin:auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, .5fr);
+    row-gap: .5vw;
+    gap: .5vw;
+  }
+
+  #topnav {
+    bottom: .5vw;
+    right: -5vw;
+  }
+
+  .toptext {
+    top: 1vw;
+  }
+
+  .bottomtext {
+    bottom: 4vw;
+  }
+
+  .hawaiitext {
+    top: 18vw;
+  }
+
+  .bottombigtext {
+    bottom: 1vw;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  #form {
+    width: 60%;
+  }
+}
