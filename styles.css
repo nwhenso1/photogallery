@@ -251,6 +251,10 @@ footer {
   font-weight: bold;
 }
 
+a:hover {
+  color:#007D7B;
+}
+
 @media screen and (min-width: 880px) {
   body {
     width: 880px;
